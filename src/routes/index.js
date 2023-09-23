@@ -11,8 +11,8 @@ router.post('/emails/contact', (req, res) => {
     const { name, email, phone, message } = req.body
     sendEmail({
         to: "olivosergio09@gmail.com",
-        subject: "Mi primer Email",
-        text: `hello word ${name}`
+        subject: `MSJ Portfolio ${name}`,
+        text: `Hello soy ${name}, mi numero es ${phone}, ${message}`
     })
 
     res.send({message: 'email send'}).status(200)
